@@ -4,6 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import ar.edu.unlam.pbii.grupo02.ColitionException;
+
+
 public class Grupo03 {
 	@Test
 	public void queSePuedaCrearUnCliente() {
@@ -58,6 +61,7 @@ public class Grupo03 {
 		actual.vincularPersona(new Cliente(4000, "Celeste"));
 		actual.vincularPersona(new Cliente(9500, "Ricardo"));
 		
+		
 		assertEquals((Integer) 10, actual.getCantidadDePersonasVinculadas());		
 	}
 	
@@ -69,6 +73,7 @@ public class Grupo03 {
 		
 		actual.vincularPersona(celeste);
 		actual.agregarProducto(aVender);
+		
 		actual.registrarCompra(celeste, aVender);
 		
 		assertEquals((Double) 1000.0, celeste.getPrecioDelProducto(aVender));
